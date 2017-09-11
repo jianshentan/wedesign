@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>WE-Design</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+
+    <div id="top">
+        <h2>
+            WHO IS
+        </h2>
+        <h1>
+            UNKNOWN
+        </h1>
+        <p>
+            “Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and tech- nology in a time of digital and social media dependency. “Who Is Unknown” utilizes the physical and digital realm to network, andhighlight the community of emerging talents in an unmaskedephemeral physical experience, and in a permanent digitalterritory. The installation utilizes 3D printing and vacuum forming technologies to create a physical display of faces that appear “unknown,” yet are thefaces of emerging talent; the installation also contains a “selfie booth,” which permits individuals to take selfies behind a un-gendered mask, underlining the theme of being masked by social media. The digital display uses #whoisunknown and profiles reposted on social media to connect the audience and participants to our Instagram account @whoisunknown project and a user friendly informative website.
+        </p>
+    </div>
+
+    <div id="tiles">
+        {% for img in instagram_images_url %}    
+        <div class="tile">
+            <img src="/assets/images/{{ img }}">
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="footer">
+        <div>
+            WE Design 
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/index.js"/></script>
+</body>
+</html>
