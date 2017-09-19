@@ -1,39 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>WE-Design</title>
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67426824-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-67426824-8');
+    </script>
+
+    <title>Who is Unknownn</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="Index,Follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="canonical" href="http://www.wedesign.com">
+    <meta name="keywords" content="Who Is Unknown, London Design Festival, social media, installation, selfie, 3d printed, faces, instagram" >
+    <meta name="description" content="“Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and technology in a time of digital and social media dependency. The installation utilizes digital fabrication technologies to create a physical display of faces that appear “unknown,” yet are the faces of emerging talent.">
+
+    <!--FACEBOOK-->
+    <meta property="og:title" content="" >
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="http://www.wedesign.com" >
+    <meta property="og:description" content="“Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and technology in a time of digital and social media dependency. The installation utilizes digital fabrication technologies to create a physical display of faces that appear “unknown,” yet are the faces of emerging talent." >
+    <meta property="og:image" content="/assets/images/share-image.png" >
+    <meta property="og:type" content="website" >
+    <meta property="og:locale" content="en_US" >
+
+    <!--TWITTER-->
+    <meta property="twitter:card" content="summary_large_image" >
+    <meta property="twitter:title" content="Who Is Unknown" >
+    <meta property="twitter:description" content="“Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and technology in a time of digital and social media dependency. The installation utilizes digital fabrication technologies to create a physical display of faces that appear “unknown,” yet are the faces of emerging talent." >
+    <meta property="twitter:url" content="http://www.wedesign.com" >
+    <meta property="twitter:image" content="/assets/images/share-image.png" >
+
+    <!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Style sheet -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
 
-    <div id="top">
-        <h2>
-            WHO IS
-        </h2>
-        <h1>
-            UNKNOWN
-        </h1>
-        <p>
-            “Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and tech- nology in a time of digital and social media dependency. “Who Is Unknown” utilizes the physical and digital realm to network, andhighlight the community of emerging talents in an unmaskedephemeral physical experience, and in a permanent digitalterritory. The installation utilizes 3D printing and vacuum forming technologies to create a physical display of faces that appear “unknown,” yet are thefaces of emerging talent; the installation also contains a “selfie booth,” which permits individuals to take selfies behind a un-gendered mask, underlining the theme of being masked by social media. The digital display uses #whoisunknown and profiles reposted on social media to connect the audience and participants to our Instagram account @whoisunknown project and a user friendly informative website.
-        </p>
+    <br>
+    <br>
+
+    <div class="contain" id="top">
+        <img id="logo" src="/assets/images/logo.png">
+        <br>
+        <br>
+        <div id="description-text">
+            “Who Is Unknown” is a project that connects innovators and creatives involved in art, design, and technology in a time of digital and social media dependency. “Who Is Unknown” utilizes the physical and digital realm to network, and highlight the community of emerging talents in an un-masked ephemeral physical experience, and in a permanent digital territory. The installation utilizes digital fabrication technologies to create a physical display of faces that appear “unknown,” yet are the faces of emerging talent.
+        </div>
+
+        <br>
+        <br>
+
+        <div id="icons" class="contain">
+            <span class="icon"><a href="mailto:together@we-designs.com" target="_blank"><img src="/assets/images/email.png"></a></span>
+            <span class="icon"><a href="https://www.instagram.com/WhoIsUnknownProject" target="_blank"><img src="/assets/images/insta.png"></a></span>
+        </div>
     </div>
 
-    <div id="tiles">
-        {% for img in instagram_images_url %}    
-        <div class="tile">
-            <img src="/assets/images/{{ img }}">
-        </div>
-        {% endfor %}
-    </div>
+    <br>
+    <br>
+
+    <div id="tiles"></div>
 
     <div id="footer">
-        <div>
-            WE Design 
+        <div class="contain">
+            <div style="float:left;">
+                <a href="http://we-designs.com/" target="_blank" style="color: black; text-decoration: none;">&copy; WE-DESIGNS, LLC 2017</a>
+            </div>
+            <div style="float:right;">
+                London Design Festival
+            </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var imgs_url = [];
+        {% for img in instagram_images_url %}    
+        imgs_url.push('{{ img }}');
+        {% endfor %}
+        {% for img in tile_images_url %}
+        imgs_url.push('{{ img }}');
+        {% endfor %}
+    </script>
     <script src="/assets/js/index.js"/></script>
 </body>
 </html>
